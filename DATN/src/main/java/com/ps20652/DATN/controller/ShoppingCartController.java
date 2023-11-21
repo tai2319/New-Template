@@ -62,7 +62,7 @@ public class ShoppingCartController {
         }
         
 
-        return "user2/cart";
+        return "app/layout/cart";
     }
 
     @PostMapping("/addItem")

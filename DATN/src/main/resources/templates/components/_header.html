@@ -37,15 +37,28 @@
           <a href=""
             class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon
               name="search-outline"></ion-icon></a>
-          <div class="dropdown dropdown-hover">
-            <label tabindex="0"
-              class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon
-                name="person-outline"></ion-icon></label>
-            <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40">
-              <li><a>Sign-in</a></li>
-              <li><a>Sign-up</a></li>
-            </ul>
-          </div>
+              <div class="dropdown dropdown-hover">
+                <label tabindex="0"
+                  class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon
+                    name="person-outline"></ion-icon></label>
+                    <ul th:unless="${username}" tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40">
+                      <li><a>Sign-in</a></li>
+                      <li><a>Sign-up</a></li>
+                    </ul>
+                    <!--  -->
+                    <form class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40" sec:authorize="hasRole('USER')" th:if="${username}" th:action="@{/logout}" method="post" style="z-index: 999;">
+                      <li><a class="dropdown-item " th:href="@{/profile}" style="font-size: smaller;" >Thông tin cá nhân</a></li>
+           
+                      <li class="dropdown-item"><button class="border-0 bg-white" type="submit" style="font-size: smaller;">Đăng xuất</button></li>
+                    </form> 
+                    <!--  -->
+                    <form class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40" sec:authorize="hasRole('ADMIN') or hasRole('STAFF')" th:if="${username}" th:action="@{/logout}" method="post" style="z-index: 999;">
+                      <li><a class="dropdown-item " th:href="@{/profile}" style="font-size: smaller;">Thông tin cá nhân</a></li>
+                      <li><a class="dropdown-item " th:href="@{/admin/products}" style="font-size: smaller;" >Quản Lý</a></li>
+                      <li class="dropdown-item"><button class="border-0 bg-white" type="submit" style="font-size: smaller;">Đăng xuất</button></li>
+                    </form> 
+                    <!--  -->
+              </div>
           <a href=""
             class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon
               name="cart-outline"></ion-icon></a>

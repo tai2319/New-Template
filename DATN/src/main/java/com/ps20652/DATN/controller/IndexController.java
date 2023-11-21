@@ -48,7 +48,7 @@ import com.ps20652.DATN.service.ShoppingCartService;
 import com.ps20652.DATN.service.UploadService;
 
 @Controller
-@RequestMapping()
+@RequestMapping("/")
 public class IndexController {
 
     @Autowired
@@ -67,10 +67,6 @@ public class IndexController {
     // private ReviewReplyService replyService;
     //
 
-    @GetMapping("/home")
-    public String home() {
-        return "components/index";
-    }
 
     @GetMapping("/listproduct")
     public String product() {
@@ -125,12 +121,11 @@ public class IndexController {
         model.addAttribute("categories", cat);
         model.addAttribute("fb", feedback);
 
-        return "user2/index2";
+        return "components/index";
     }
-
-    @GetMapping("/login")
+  @GetMapping("/login")
     public String login() {
-        return "security2/login2";
+        return "app/auth/login/sign_in";
     }
 
     @GetMapping("/new")

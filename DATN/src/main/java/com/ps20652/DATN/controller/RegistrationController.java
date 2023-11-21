@@ -27,7 +27,7 @@ public class RegistrationController {
 	public String showRegistrationForm(Model model) {
 	    model.addAttribute("user", new Account());
 	    model.addAttribute("registrationError", ""); // Đảm bảo trường lỗi được truyền vào giao diện
-	    return "security2/register";
+	    return "app/auth/login/sign-up";
 	}
 	
 	@GetMapping("/checkUsername")
