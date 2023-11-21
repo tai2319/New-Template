@@ -72,6 +72,11 @@ public class IndexController {
         return "components/index";
     }
 
+    @GetMapping("/listproduct")
+    public String product() {
+        return "app/layout/list_product";
+    }
+
     @GetMapping
     public String listProducts(Model model, Authentication authentication,
             @RequestParam(name = "confirmationMessage", required = false) String confirmationMessage) {
