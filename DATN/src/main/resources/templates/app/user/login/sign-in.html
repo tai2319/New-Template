@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- Library -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+            <!-- icon -->
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            <!-- icon -->
+        <!-- Library -->
+</head>
+<body class="bg-white min-h-screen">
+    <nav class="w-full bg-black">
+        <div class="w-[90%] md:w-[80%] mx-auto hidden lg:block">
+            <div class="w-full flex justify-between text-xs font-light text-white items-center py-2">
+                <div class="flex gap-x-1">
+                    <ion-icon class="text-sm" name="call-outline"></ion-icon>
+                    <p>Hotline: </p><p>0916215180</p>
+                </div>
+                <div class="">
+                    <p>Follow Us  and get a chance to win 80% off</p>
+                </div>
+                <div class="flex gap-x-2">
+                    <ion-icon class="text-sm" name="earth-outline"></ion-icon>
+                    <p>Language: </p>
+                    <select name="" id="" class="bg-transparent outline-none">
+                        <option value="none">-- --</option>
+                        <option value="VN">VN</option>
+                        <option value="US">US</option>
+                        <option value="UK">UK</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="w-full shadow sticky-top top-0">
+        <section class="w-[90%] md:w-[80%] mx-auto   ">
+            <div class="w-full flex justify-between items-center py-3">
+                <div class="text-3xl font-bold text-black group">
+                    <a href="/">Mari<span class="duration-300 group-hover:duration-300 group-hover:text-orange-300">.ous</span></a>
+                </div>
+                <div class="flex gap-x-10 items-center">
+                    <div class=" gap-x-10 text-black font-light hidden lg:flex">
+                        <div class="">
+                            <a href="" class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2">Home</a>
+                        </div>
+                        <div class="">
+                            <a href="" class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2">About</a>
+                        </div>
+                        <div class="">
+                            <div class="dropdown dropdown-bottom">
+                                <label tabindex="0" class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2 cursor-pointer">Product</label>
+                                <ul tabindex="0" class="dropdown-content z-[1] mt-5 menu p-2 shadow bg-white rounded-box w-52">
+                                  <li><a>Item 1</a></li>
+                                  <li><a>Item 2</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                        <div class="">
+                            <a href="" class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2 ">Blogs</a>
+                        </div>
+                        <div class="">
+                            <a href="" class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2">Contact</a>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-5 mt-1 text-orange-300 text-2xl lg:text-xl">
+                        <a href="" class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon name="search-circle-outline"></ion-icon></a>
+                        <a href="" class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon name="cart-outline"></ion-icon></a>
+                        <a href="" class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon name="person-outline"></ion-icon></a>
+    
+                        <div class="drawer drawer-end z-[9999] block lg:hidden">
+                            <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+                            <div class="drawer-content">
+                              <!-- Page content here -->
+                              <label for="my-drawer-4" class="drawer-button "><ion-icon class="" name="menu-outline"></ion-icon></label>
+                            </div> 
+                            <div class="drawer-side z-[99999]">
+                              <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+                              <ul class="menu p-4 w-80  min-h-full bg-white text-base-content text-black text-lg">
+                                <div class="py-5">
+                                    <p class="uppercase text-4xl text-black font-bold">Mari<span class="text-orange-300">.ous</span></p>
+                                </div>
+                                <!-- Sidebar content here -->
+                                <li class="duration-300 hover:duration-300 hover:text-orange-300"><a>Home</a></li>
+                                <li class="duration-300 hover:duration-300 hover:text-orange-300"><a>About</a></li>
+                                <li >
+                                    <details>
+                                      <summary class="duration-300 hover:duration-300 hover:text-orange-300">Product</summary>
+                                      <ul>
+                                        <li><a>Sofa</a></li>
+                                        <li><a>Table</a></li>
+                                        
+                                      </ul>
+                                    </details>
+                                  </li>
+                                <li class="duration-300 hover:duration-300 hover:text-orange-300"><a>Blogs</a></li>
+                                <li class="duration-300 hover:duration-300 hover:text-orange-300"><a>Contact</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <div class="w-full md:w-[80%] xl:w-[70%] mx-auto my-10">
+        <div class="py-5">
+            <p class="text-6xl font-semibold text-orange-300 text-center hover:underline hover:underline-offset-2 hover:duration-300 duration-300">Sign-in</p>
+        </div>
+        <div class="flex gap-x-5 mt-5">
+            <div class="w-full lg:w-[50%]">
+                <!-- <Image src="/assets/sign-in.png" alt=""/> -->
+                <Image class="w-full" src="../../../../static/assets/images/sign-in.png" alt=""/>
+            </div>
+            <!--  -->
+            <div class="w-full lg:w-[50%] mt-10">
+                <form action="" class="w-full flex flex-col gap-y-5">
+                    <div class="">
+                        
+                        <input type="text" class="py-2  px-2 bg-transparent border-b-2  text-black border-orange-300  w-full outline-none" placeholder="User Name" />
+                    </div>
+                    <div class="">
+                        
+                        <input type="text" class="py-2  px-2 bg-transparent border-b-2 text-black border-orange-300  w-full outline-none" placeholder="Password" />
+                    </div>
+                    
+                    <div class="">
+                        <button class="border-2 border-orange-300 py-2 hover:bg-orange-300 hover:duration-300 duration-300 text-black hover:text-white rounded w-full">Sign-in</button>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" class="hover:text-orange-300 hover:underline hover:underline-offset-2">Are you have a Account? Sign-up!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<footer class="bg-white w-full bg-black mt-10">
+    <div class="w-full bg-black">
+        <section class="flex justify-between w-[80%] mx-auto p-10 bg-black text-white">
+            <aside>
+              <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+              <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+            </aside> 
+            <nav class="flex flex-col">
+              <header class="footer-title">Services</header> 
+              <a class="link link-hover">Branding</a>
+              <a class="link link-hover">Design</a>
+              <a class="link link-hover">Marketing</a>
+              <a class="link link-hover">Advertisement</a>
+            </nav> 
+            <nav class="flex flex-col">
+              <header class="footer-title">Company</header> 
+              <a class="link link-hover">About us</a>
+              <a class="link link-hover">Contact</a>
+              <a class="link link-hover">Jobs</a>
+              <a class="link link-hover">Press kit</a>
+            </nav> 
+            <nav class="flex flex-col">
+              <header class="footer-title">Legal</header> 
+              <a class="link link-hover">Terms of use</a>
+              <a class="link link-hover">Privacy policy</a>
+              <a class="link link-hover">Cookie policy</a>
+            </nav>
+        </section>
+        <section class=" border-t-2 border-white w-[80%] mx-auto text-center py-1 bg-black text-white">
+            <aside class="text-center text-xs"> 
+              <p class="text-center">Copyright © 2023 - Design by Marious - Huynh Tan Phat</p>
+            </aside>
+        </section>
+    </div>
+</footer>
+</body>
+</html>
