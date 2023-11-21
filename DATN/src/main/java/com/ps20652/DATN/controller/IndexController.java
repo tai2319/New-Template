@@ -48,7 +48,7 @@ import com.ps20652.DATN.service.ShoppingCartService;
 import com.ps20652.DATN.service.UploadService;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping()
 public class IndexController {
 
     @Autowired
@@ -66,6 +66,11 @@ public class IndexController {
     // @Autowired
     // private ReviewReplyService replyService;
     //
+
+    @GetMapping("/home")
+    public String home() {
+        return "components/index";
+    }
 
     @GetMapping
     public String listProducts(Model model, Authentication authentication,
@@ -129,10 +134,9 @@ public class IndexController {
         if (principal != null) {
             String username = principal.getName();
             int userId = getUserIDByUsername(username);
-            
+
             model.addAttribute("username", username);
-             
-           
+
             int cartItemCount = cartService.getCount(userId);
             model.addAttribute("cartItemCount", cartItemCount);
 
@@ -143,13 +147,12 @@ public class IndexController {
     @GetMapping("/contact")
     public String contact(Principal principal, Model model) {
 
-          if (principal != null) {
+        if (principal != null) {
             String username = principal.getName();
             int userId = getUserIDByUsername(username);
-            
+
             model.addAttribute("username", username);
-             
-           
+
             int cartItemCount = cartService.getCount(userId);
             model.addAttribute("cartItemCount", cartItemCount);
 
@@ -161,13 +164,12 @@ public class IndexController {
     @GetMapping("/about")
     public String About(Principal principal, Model model) {
 
-  if (principal != null) {
+        if (principal != null) {
             String username = principal.getName();
             int userId = getUserIDByUsername(username);
-            
+
             model.addAttribute("username", username);
-             
-           
+
             int cartItemCount = cartService.getCount(userId);
             model.addAttribute("cartItemCount", cartItemCount);
 
@@ -188,16 +190,15 @@ public class IndexController {
 
         if (principal != null) {
             if (principal != null) {
-            String username = principal.getName();
-            int userId = getUserIDByUsername(username);
-            
-            model.addAttribute("username", username);
-             
-           
-            int cartItemCount = cartService.getCount(userId);
-            model.addAttribute("cartItemCount", cartItemCount);
+                String username = principal.getName();
+                int userId = getUserIDByUsername(username);
 
-        }
+                model.addAttribute("username", username);
+
+                int cartItemCount = cartService.getCount(userId);
+                model.addAttribute("cartItemCount", cartItemCount);
+
+            }
         }
 
         model.addAttribute("products", product);
@@ -246,13 +247,12 @@ public class IndexController {
         List<Category> allcat = categoryService.findAll();
         Category cat = categoryService.findbyId(categoryId);
         List<Product> products = productService.findByCategoryCategoryId(categoryId);
-         if (principal != null) {
+        if (principal != null) {
             String username = principal.getName();
             int userId = getUserIDByUsername(username);
-            
+
             model.addAttribute("username", username);
-             
-           
+
             int cartItemCount = cartService.getCount(userId);
             model.addAttribute("cartItemCount", cartItemCount);
 
