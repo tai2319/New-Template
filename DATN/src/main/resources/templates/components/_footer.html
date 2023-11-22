@@ -1,6 +1,6 @@
 <footer class="bg-white w-full bg-black mt-10" th:fragment="footer">
   <div class="w-full bg-black">
-    <section class="flex justify-between w-[80%] mx-auto p-10 bg-black text-white">
+    <section class="flex flex-col w-[90%] justify-between md:w-[80%] mx-auto p-10 bg-black text-white">
       <aside>
         <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
           clip-rule="evenodd" class="fill-current">
@@ -36,6 +36,29 @@
         <p class="text-center">Copyright © 2023 - Design by Marious - Huynh Tan Phat</p>
       </aside>
     </section>
+   
   </div>
+  <!--  -->
 
+  <!--  -->
 </footer>
+
+<script>
+  window.fbAsyncInit = function() {
+      FB.init({
+          appId : "282791425847994",
+          xfbml : true,
+          version : "v2.6"
+      });
+  };
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+          return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>

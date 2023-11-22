@@ -204,7 +204,7 @@ public class IndexController {
         model.addAttribute("products", product);
         model.addAttribute("feedbacks", feedback);
 
-        return "user2/product-details";
+        return "app/layout/product_detail";
     }
 
     // @GetMapping ("/ProductDetails/{productId}")
