@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{/components/layout :: areas(~{::title},~{::body})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Library -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- icon -->
+    <!-- Library -->
+</head>
+
+<body class="bg-white min-h-screen">
+
+    <section class="w-[90%] md:w-[80%] mx-auto text-black my-10">
+        
+        <div class="flex flex-col lg:flex-row gap-x-5 gap-y-5">
+            <div class="flex flex-col w-full lg:w-[60%] gap-y-5">
+                <!--  -->
+                
+                <div class="flex flex-col border border-orange-300 rounded-lg text-xs gap-y-2 py-5 px-2 md:px-4 lg:px-5 text-sm font-light">
+                    <div class="flex justify-between">
+                        <p class="text-lg font-semibold">Thông Tin Nhận Hàng</p>
+                        <ion-icon class="text-xl text-orange-300 cursor-pointer" name="open-outline"></ion-icon>
+                    </div>
+                    <div class="grid grid-cols-2 justify-between ">
+                        <p>Huỳnh Tấn Phát |  0916215180</p>
+                        <p class="text-end">Công Viên Phần Mềm Quang Trung, Q12, TP.HCM</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="flex w-full flex-col gap-y-5 text-black text-sm font-light">
+                    <div class="flex w-full border border-orange-300 rounded-lg p-5 gap-x-2">
+                        <div class="w-[50%] sm:w-[40%] lg:w-[20%]">
+                            <img class="" src="/assets/images/products/s1.jpg" alt="">
+                        </div>
+                        
+                        <div class="grid grid-cols-2 w-full justify-between text-xs">
+                            <div class="flex flex-col gap-y-2 justify-between ">
+                                <p class="lg:text-lg lg:font-semibold">Ghế Ngồi Êm VCL</p>
+                                <p>Description</p>
+                                <div class="join w-full lg:w-[80%] flex items-center text-center  ">
+                                    <button class="join-item  border border-orange-300 px-2 py-2 w-[25%]">-</button>
+                                    <input type="text" class="join-item bg-white border border-orange-300 w-[50%] text-center py-2 items-center" value="2">
+                                    <button class="join-item border border-orange-300 px-2 py-2 w-[25%]">+</button>
+                                  </div>
+                            </div>
+                            <div class="flex flex-col text-end text-xs md:text-2xl justify-between text-orange-300">
+                                <p>$120,000</p>
+                                <a href="#" class="text-red-300"><ion-icon class="text-end" name="trash-outline"></ion-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-y-5 text-black font-light">
+                
+                <div class="flex flex-col gap-y-10 border border-orange-300 rounded-lg px-5 py-5">
+                    <div class="flex flex-col gap-y-3">
+                        <p class="text-lg font-semibold">Tình trạng đơn hàng</p>
+                        <ul class="steps steps-horizontal">
+                            <li class="step step-warning">Chờ Xác Nhận</li>
+                            <li class="step step-warning">Chờ Lấy Hàng</li>
+                            <li class="step">Đang Giao</li>
+                            <li class="step">Hoàn Thành</li>
+                          </ul>
+                    </div>
+                    <!--  -->
+                    <div class="flex flex-col w-full gap-y-3">
+                        <p class="text-lg font-semibold">Phương Thức Thanh Toán</p>
+                        <div class="w-full">
+                            <select name="" id="" class="w-full bg-white text-black py-3 border-b-2 outline-none">
+                                <option value="">Chọn Phương Thức Thanh Toán</option>
+                                <option value="">MoMo</option>
+                                <option value="">PayPal</option>
+                                <option value="">Banking</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="flex flex-col w-full gap-y-3">
+                        <p class="text-lg font-semibold">Phương Thức Vận Chuyển</p>
+                        <div class="w-full">
+                            <select name="" id="" class="w-full bg-white text-black py-3 border-b-2 outline-none">
+                                <option value="">Chọn Phương Thức Vận Chuyển</option>
+                                <option value="">Giao Hàng Tiết Kiệm</option>
+                                <option value="">PayPal</option>
+                                <option value="">Banking</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="flex justify-between w-full gap-x-5 border-b">
+                        <p class="text-lg font-semibold">Mã Giảm Giá</p>
+                        <div class="w-[70%]">
+                            <textarea class="w-full border border-orange-300 bg-white rounded-lg px-2 py-1 items-center " placeholder="Nhập Mã Giảm Giá"></textarea>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="flex flex-col w-full gap-y-3 border-b">
+                        <p class="text-lg font-semibold">Ghi Chú</p>
+                        <div class="w-full">
+                            <textarea class="w-full border border-orange-300 bg-white rounded-lg px-2 py-3 " placeholder="Ghi Chú"></textarea>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="flex flex-col w-full gap-y-3 border-b">
+                        <p class="text-lg font-semibold">Thời Gian Giao Hàng dự kiến</p>
+                        <div class="w-full text-sm font-light">
+                           <p>5 Ngày nữa đợi đi thằng lol :>>></p>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <button class="w-full rounded-lg duration-300 border border-orange-300 hover:bg-orange-300 hover:text-white hover:duration-300 py-3">Đặt Hàng Ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
