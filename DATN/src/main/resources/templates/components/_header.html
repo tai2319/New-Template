@@ -7,29 +7,29 @@
       <div class="flex gap-x-10 items-center">
         <div class=" gap-x-10 text-black font-light hidden lg:flex">
           <div class="">
-            <a href=""
+            <a th:href="@{/}"
               class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2">Home</a>
           </div>
           <div class="">
-            <a href=""
+            <a th:href="@{/about}"
               class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2">About</a>
           </div>
           <div class="">
             <div class="dropdown dropdown-bottom">
-              <label tabindex="0"
-                class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2 cursor-pointer">Product</label>
-              <ul tabindex="0" class="dropdown-content z-[1] mt-5 menu p-2 shadow bg-white rounded-box w-52">
+              <a th:href="@{/listproduct}" tabindex="0"
+                class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2 cursor-pointer">Product</a>
+              <!-- <ul tabindex="0" class="dropdown-content z-[1] mt-5 menu p-2 shadow bg-white rounded-box w-52">
                 <li><a>Item 1</a></li>
                 <li><a>Item 2</a></li>
-              </ul>
+              </ul> -->
             </div>
           </div>
           <div class="">
-            <a href=""
+            <a th:href="@{/new}"
               class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2 ">Blogs</a>
           </div>
           <div class="">
-            <a href=""
+            <a th:href="@{/contact}"
               class="duration-300 hover:duration-300 hover:text-orange-300 hover:underline hover:underline-offset-2">Contact</a>
           </div>
         </div>
@@ -37,28 +37,35 @@
           <a href=""
             class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon
               name="search-outline"></ion-icon></a>
-              <div class="dropdown dropdown-hover">
-                <label tabindex="0"
-                  class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon
-                    name="person-outline"></ion-icon></label>
-                    <ul th:unless="${username}" tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40">
-                      <li><a>Sign-in</a></li>
-                      <li><a>Sign-up</a></li>
-                    </ul>
-                    <!--  -->
-                    <form class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40" sec:authorize="hasRole('USER')" th:if="${username}" th:action="@{/logout}" method="post" style="z-index: 999;">
-                      <li><a class="dropdown-item " th:href="@{/profile}" style="font-size: smaller;" >Thông tin cá nhân</a></li>
-           
-                      <li class="dropdown-item"><button class="border-0 bg-white" type="submit" style="font-size: smaller;">Đăng xuất</button></li>
-                    </form> 
-                    <!--  -->
-                    <form class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40" sec:authorize="hasRole('ADMIN') or hasRole('STAFF')" th:if="${username}" th:action="@{/logout}" method="post" style="z-index: 999;">
-                      <li><a class="dropdown-item " th:href="@{/profile}" style="font-size: smaller;">Thông tin cá nhân</a></li>
-                      <li><a class="dropdown-item " th:href="@{/admin/products}" style="font-size: smaller;" >Quản Lý</a></li>
-                      <li class="dropdown-item"><button class="border-0 bg-white" type="submit" style="font-size: smaller;">Đăng xuất</button></li>
-                    </form> 
-                    <!--  -->
-              </div>
+          <div class="dropdown dropdown-hover">
+            <label tabindex="0"
+              class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon
+                name="person-outline"></ion-icon></label>
+            <ul th:unless="${username}" tabindex="0"
+              class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40">
+              <li><a>Sign-in</a></li>
+              <li><a>Sign-up</a></li>
+            </ul>
+            <!--  -->
+            <form class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40"
+              sec:authorize="hasRole('USER')" th:if="${username}" th:action="@{/logout}" method="post"
+              style="z-index: 999;">
+              <li><a class="dropdown-item " th:href="@{/profile}" style="font-size: smaller;">Thông tin cá nhân</a></li>
+
+              <li class="dropdown-item"><button class="border-0 bg-white" type="submit" style="font-size: smaller;">Đăng
+                  xuất</button></li>
+            </form>
+            <!--  -->
+            <form class="dropdown-content z-[1] menu p-2 shadow bg-white  rounded-box w-40"
+              sec:authorize="hasRole('ADMIN') or hasRole('STAFF')" th:if="${username}" th:action="@{/logout}"
+              method="post" style="z-index: 999;">
+              <li><a class="dropdown-item " th:href="@{/profile}" style="font-size: smaller;">Thông tin cá nhân</a></li>
+              <li><a class="dropdown-item " th:href="@{/admin/products}" style="font-size: smaller;">Quản Lý</a></li>
+              <li class="dropdown-item"><button class="border-0 bg-white" type="submit" style="font-size: smaller;">Đăng
+                  xuất</button></li>
+            </form>
+            <!--  -->
+          </div>
           <a href=""
             class=" text-center items-center duration-300 hover:border hover:pt-1 hover:px-2 hover:border-orange-300 rounded hover:duration-300"><ion-icon
               name="cart-outline"></ion-icon></a>

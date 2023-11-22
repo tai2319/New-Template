@@ -67,7 +67,6 @@ public class IndexController {
     // private ReviewReplyService replyService;
     //
 
-
     @GetMapping("/listproduct")
     public String product() {
         return "app/layout/list_product";
@@ -123,7 +122,8 @@ public class IndexController {
 
         return "components/index";
     }
-  @GetMapping("/login")
+
+    @GetMapping("/login")
     public String login() {
         return "app/auth/login/sign_in";
     }
@@ -141,7 +141,7 @@ public class IndexController {
             model.addAttribute("cartItemCount", cartItemCount);
 
         }
-        return "main/New";
+        return "app/layout/blogs";
     }
 
     @GetMapping("/contact")
@@ -158,7 +158,7 @@ public class IndexController {
 
         }
 
-        return "main/Contact";
+        return "app/layout/contact";
     }
 
     @GetMapping("/about")
@@ -175,7 +175,7 @@ public class IndexController {
 
         }
 
-        return "main/About";
+        return "app/layout/about";
     }
 
     @GetMapping("/access-denied")
