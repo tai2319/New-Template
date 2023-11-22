@@ -72,6 +72,11 @@ public class IndexController {
         return "app/layout/list_product";
     }
 
+    @GetMapping("/shoppingcart")
+    public String shoppngcart() {
+        return "app/layout/pay";
+    }
+
     @GetMapping
     public String listProducts(Model model, Authentication authentication,
             @RequestParam(name = "confirmationMessage", required = false) String confirmationMessage) {
